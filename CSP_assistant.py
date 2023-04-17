@@ -36,12 +36,3 @@ def pretty_matrix(matrix):
         print("  ¦")
 
     print("+--" + row_length*" " + "--+")
-
-
-matrix = [
-    [1, 2, 3, 4],
-    [1, 2, 64646460, 0],
-    [46, -3, -5, 3]
-]
-
-pretty_matrix(matrix)
