@@ -23,16 +23,28 @@ def pretty_matrix(matrix):
         row_length = row_length + ele
     row_length = row_length + 2*(1+len(max_col_length_list)) - 4
 
-    print("+--" + row_length*" " + "--+")
+    cnt = 1
+    print("       ", end="")
+    for ele in max_col_length_list:
+        print("t"+ str(cnt), end="")
+        print(ele*" ", end="")
+        cnt += 1
+    print()
 
+    print("   +-- " + row_length*" " + " --+")
+
+    cnt = 1
     for row in matrix:
         index = 0
-        print("¦", end="")
+        print("s"+ str(cnt) +" ¦ ", end="")
         for wise in row:
             padding = max_col_length_list[index] - len(str(wise))
             print("  " + str(wise), end="")
             print(padding*" ", end="")
             index += 1
-        print("  ¦")
+        cnt += 1
+        print("   ¦")
 
-    print("+--" + row_length*" " + "--+")
+    print("   +-- " + row_length*" " + " --+")
+
+    if len(matrix)>=10 or len(matrix[0])>=10: print("Note: 9x9 limited!")
