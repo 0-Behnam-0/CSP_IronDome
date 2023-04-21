@@ -7,9 +7,8 @@ matrix = []
 row_list = []
 for y in range(sensors):
     for x in range(targets):
-        row_list.append("0")
+        row_list.append("-1")
     matrix.append(row_list.copy())
     row_list.clear()
-
 
 pretty_matrix(matrix)

@@ -1,4 +1,4 @@
-def pretty_matrix(matrix):
+def pretty_matrix(matrix) -> str:
 
     row_break = len(matrix[0])
 
